@@ -1,0 +1,26 @@
+<idea-plugin>
+    <id>com.tom112233.solidity-snippets</id>
+    <name>solidity-snippets</name>
+    <vendor email="lixiangyu@jingshengyue.top" url="http://www.jingshengyue.top">jingshengyue</vendor>
+
+    <description><![CDATA[
+    Live Templates For Solidity V0.4<br>
+    Show details in Preferences -> Editor -> Live Templates
+    ]]></description>
+
+    <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+<!--    <depends>com.intellij.modules.platform</depends>-->
+
+    <!--依赖的其他插件能力-->
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+        <defaultLiveTemplates file="/liveTemplates/snippets.xml"/>
+        <liveTemplateContext implementation="com.tom112233.solidity.snippets.SolidityContext"/>
+    </extensions>
+
+    <!--插件动作-->
+    <actions>
+        <!-- Add your actions here -->
+    </actions>
+</idea-plugin>
