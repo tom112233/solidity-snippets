@@ -1,8 +1,8 @@
 plugins {
     id 'java'
     id 'org.jetbrains.intellij' version '0.4.21'
+    id 'net.researchgate.release' version '2.8.1'
 }
-
 group 'com.tom112233'
 version '1.0-SNAPSHOT'
 
