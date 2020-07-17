@@ -1,5 +1,6 @@
 <templateSet group="Solidity">
-    <template name="func" value="function $funcName$($1$) $specifier$ $modifier$ {&#10;    $END$&#10;}" description="function定义"
+    <template name="func" value="function $funcName$($1$) $specifier$ $modifier$ {&#10;    $END$&#10;}"
+              description="function定义"
               toReformat="false" toShortenFQNames="true">
         <variable name="funcName" expression="" defaultValue="&quot;funcName&quot;" alwaysStopAt="true"/>
         <variable name="1" expression="" defaultValue="&quot;&quot;" alwaysStopAt="true"/>
@@ -43,7 +44,8 @@
             <option name="SOLIDITY" value="true"/>
         </context>
     </template>
-    <template name="funcr" value="function $funcName$($1$) $specifier$ $modifier$ returns ($returnType$){&#10;    $END$&#10;}"
+    <template name="funcr"
+              value="function $funcName$($1$) $specifier$ $modifier$ returns ($returnType$){&#10;    $END$&#10;}"
               description="function定义带return" toReformat="false" toShortenFQNames="true">
         <variable name="funcName" expression="" defaultValue="&quot;funcName&quot;" alwaysStopAt="true"/>
         <variable name="1" expression="" defaultValue="&quot;&quot;" alwaysStopAt="true"/>
