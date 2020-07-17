@@ -39,7 +39,7 @@
             <option name="SOLIDITY" value="true"/>
         </context>
     </template>
-    <template name="funcr" value="function $funcName$() $specifier$ return ($returnType$){&#10;    $END$&#10;}"
+    <template name="funcr" value="function $funcName$() $specifier$ returns ($returnType$){&#10;    $END$&#10;}"
               description="function定义带return" toReformat="false" toShortenFQNames="true">
         <variable name="funcName" expression="" defaultValue="&quot;funcName&quot;" alwaysStopAt="true"/>
         <variable name="specifier"
