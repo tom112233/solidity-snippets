@@ -1,9 +1,13 @@
 <templateSet group="Solidity">
-    <template name="func" value="function $funcName$() $specifier$ {&#10;    $END$&#10;}" description="function定义"
+    <template name="func" value="function $funcName$($1$) $specifier$ $modifier$ {&#10;    $END$&#10;}" description="function定义"
               toReformat="false" toShortenFQNames="true">
         <variable name="funcName" expression="" defaultValue="&quot;funcName&quot;" alwaysStopAt="true"/>
+        <variable name="1" expression="" defaultValue="&quot;&quot;" alwaysStopAt="true"/>
         <variable name="specifier"
                   expression="enum(&quot;public&quot;,&quot;private&quot;,&quot;external&quot;,&quot;internal&quot;)"
+                  defaultValue="" alwaysStopAt="true"/>
+        <variable name="modifier"
+                  expression="enum(&quot;&quot;,&quot;pure&quot;,&quot;view&quot;,&quot;payable&quot;,&quot;constant&quot;,&quot;anonymous&quot;,&quot;indexed&quot;)"
                   defaultValue="" alwaysStopAt="true"/>
         <context>
             <option name="ACTION_SCRIPT" value="false"/>
@@ -39,11 +43,15 @@
             <option name="SOLIDITY" value="true"/>
         </context>
     </template>
-    <template name="funcr" value="function $funcName$() $specifier$ returns ($returnType$){&#10;    $END$&#10;}"
+    <template name="funcr" value="function $funcName$($1$) $specifier$ $modifier$ returns ($returnType$){&#10;    $END$&#10;}"
               description="function定义带return" toReformat="false" toShortenFQNames="true">
         <variable name="funcName" expression="" defaultValue="&quot;funcName&quot;" alwaysStopAt="true"/>
+        <variable name="1" expression="" defaultValue="&quot;&quot;" alwaysStopAt="true"/>
         <variable name="specifier"
                   expression="enum(&quot;public&quot;,&quot;private&quot;,&quot;external&quot;,&quot;internal&quot;)"
+                  defaultValue="" alwaysStopAt="true"/>
+        <variable name="modifier"
+                  expression="enum(&quot;&quot;,&quot;pure&quot;,&quot;view&quot;,&quot;payable&quot;,&quot;constant&quot;,&quot;anonymous&quot;,&quot;indexed&quot;)"
                   defaultValue="" alwaysStopAt="true"/>
         <variable name="returnType" expression="complete()" defaultValue="" alwaysStopAt="true"/>
         <context>
