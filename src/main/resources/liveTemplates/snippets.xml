@@ -1,7 +1,9 @@
 <templateSet group="Solidity">
-    <template name="func" value="function $funcName$($1$) $specifier$ $modifier$ {&#10;    $END$&#10;}"
+    <template name="func" value="/*&#10;    描述：$desctiption$&#10;    参数：&#10;        $attr$&#10;*/&#10;function $funcName$($1$) $specifier$ $modifier$ {&#10;    $END$&#10;}"
               description="function定义"
               toReformat="false" toShortenFQNames="true">
+        <variable name="desctiption" expression="" defaultValue="" alwaysStopAt="true" />
+        <variable name="attr" expression="" defaultValue="&quot;参数：说明&quot;" alwaysStopAt="true" />
         <variable name="funcName" expression="" defaultValue="&quot;funcName&quot;" alwaysStopAt="true"/>
         <variable name="1" expression="" defaultValue="&quot;&quot;" alwaysStopAt="true"/>
         <variable name="specifier"
@@ -45,8 +47,11 @@
         </context>
     </template>
     <template name="funcr"
-              value="function $funcName$($1$) $specifier$ $modifier$ returns ($returnType$){&#10;    $END$&#10;}"
+              value="/*&#10;    描述：$desctiption$&#10;    参数：&#10;        $attr$&#10;    返回值：&#10;        $return$&#10;*/&#10;function $funcName$($1$) $specifier$ $modifier$ returns ($returnType$){&#10;    $END$&#10;}"
               description="function定义带return" toReformat="false" toShortenFQNames="true">
+        <variable name="desctiption" expression="" defaultValue="" alwaysStopAt="true" />
+        <variable name="attr" expression="" defaultValue="&quot;参数：说明&quot;" alwaysStopAt="true" />
+        <variable name="return" expression="" defaultValue="&quot;返回值：说明&quot;" alwaysStopAt="true" />
         <variable name="funcName" expression="" defaultValue="&quot;funcName&quot;" alwaysStopAt="true"/>
         <variable name="1" expression="" defaultValue="&quot;&quot;" alwaysStopAt="true"/>
         <variable name="specifier"
@@ -90,8 +95,9 @@
             <option name="SOLIDITY" value="true"/>
         </context>
     </template>
-    <template name="ev" value="event $name$($type$ $attrName$$END$);" description="event事件" toReformat="false"
+    <template name="ev" value="/*&#10;    描述：$desctiption$&#10;*/&#10;event $name$($type$ $attrName$$END$);" description="event事件" toReformat="false"
               toShortenFQNames="true">
+        <variable name="desctiption" expression="" defaultValue="" alwaysStopAt="true" />
         <variable name="name" expression="" defaultValue="&quot;eventName&quot;" alwaysStopAt="true"/>
         <variable name="type" expression="complete()" defaultValue="&quot;Type&quot;" alwaysStopAt="true"/>
         <variable name="attrName" expression="complete()" defaultValue="&quot;Name&quot;" alwaysStopAt="true"/>
@@ -129,9 +135,10 @@
             <option name="SOLIDITY" value="true"/>
         </context>
     </template>
-    <template name="modi" value="modifier $name$($2$) {&#10;    $END$&#10;}" description="modifier修改器"
+    <template name="modi" value="/*&#10;    描述：$desctiption$&#10;*/&#10;modifier $name$($2$) {&#10;    $END$&#10;}" description="modifier修改器"
               toReformat="false"
               toShortenFQNames="true">
+        <variable name="desctiption" expression="" defaultValue="" alwaysStopAt="true" />
         <variable name="name" expression="" defaultValue="" alwaysStopAt="true"/>
         <variable name="2" expression="" defaultValue="" alwaysStopAt="true"/>
         <context>
@@ -168,8 +175,9 @@
             <option name="SOLIDITY" value="true"/>
         </context>
     </template>
-    <template name="con" value="constructor($1$) public {&#10;    $END$&#10;}" description="constructor构建器"
+    <template name="con" value="/*&#10;    描述：$desctiption$&#10;*/&#10;constructor($1$) public {&#10;    $END$&#10;}" description="constructor构建器"
               toReformat="false" toShortenFQNames="true">
+        <variable name="desctiption" expression="" defaultValue="" alwaysStopAt="true" />
         <variable name="1" expression="" defaultValue="" alwaysStopAt="true"/>
         <context>
             <option name="ACTION_SCRIPT" value="false"/>
@@ -397,8 +405,9 @@
             <option name="SOLIDITY" value="true"/>
         </context>
     </template>
-    <template name="interf" value="interface $1$ {&#10;    $END$&#10;}" description="interface接口定义" toReformat="false"
+    <template name="interf" value="/*&#10;    描述：$desctiption$&#10;*/&#10;interface $1$ {&#10;    $END$&#10;}" description="interface接口定义" toReformat="false"
               toShortenFQNames="true">
+        <variable name="desctiption" expression="" defaultValue="" alwaysStopAt="true" />
         <variable name="1" expression="" defaultValue="&quot;name&quot;" alwaysStopAt="true"/>
         <context>
             <option name="ACTION_SCRIPT" value="false"/>
@@ -434,8 +443,9 @@
             <option name="SOLIDITY" value="true"/>
         </context>
     </template>
-    <template name="lib" value="library $1$ {&#10;    $END$&#10;}" description="library定义" toReformat="false"
+    <template name="lib" value="/*&#10;    描述：$desctiption$&#10;*/&#10;library $1$ {&#10;    $END$&#10;}" description="library定义" toReformat="false"
               toShortenFQNames="true">
+        <variable name="desctiption" expression="" defaultValue="" alwaysStopAt="true" />
         <variable name="1" expression="" defaultValue="&quot;name&quot;" alwaysStopAt="true"/>
         <context>
             <option name="ACTION_SCRIPT" value="false"/>
@@ -471,8 +481,9 @@
             <option name="SOLIDITY" value="true"/>
         </context>
     </template>
-    <template name="contract" value="contract $1$ {&#10;    $END$&#10;}" description="contract定义" toReformat="false"
+    <template name="contract" value="/*&#10;    描述：$desctiption$&#10;*/&#10;contract $1$ {&#10;    $END$&#10;}" description="contract定义" toReformat="false"
               toShortenFQNames="true">
+        <variable name="desctiption" expression="" defaultValue="" alwaysStopAt="true" />
         <variable name="1" expression="" defaultValue="&quot;name&quot;" alwaysStopAt="true"/>
         <context>
             <option name="ACTION_SCRIPT" value="false"/>
